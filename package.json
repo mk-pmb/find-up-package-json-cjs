@@ -1,0 +1,31 @@
+{ "name": "find-up-package-json-cjs",
+  "version": "0.0.0",
+  "description": "A CommonJS module to find the closest `package.json`, read it, and report its content along with paths and goodies.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/find-up-package-json-cjs/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/find-up-package-json-cjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/find-up-package-json-cjs/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "bin": "cli.stub.js",
+  "scripts": { "test": "echo E: 'No tests yet!'; exit 2" },
+  "directories": { "test": "test" },
+  "eslintConfig": { "extends": "nodejs-pmb" },
+
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+
+
+  "engines": { "npm": ">=7.0.0", "node": ">=16.0.0" }
+}
