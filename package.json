@@ -1,5 +1,5 @@
 { "name": "find-up-package-json-cjs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A CommonJS module to find the closest `package.json`, read it, and report its content along with paths and goodies.",
   "keywords": [],
 
@@ -22,8 +22,12 @@
   "eslintConfig": { "extends": "nodejs-pmb" },
 
   "dependencies": {
+    "find-pkg": "^2.0.0"
   },
   "devDependencies": {
+    "eslint-config-nodejs-pmb": "^0.3.11",
+    "eslint-plugin-json-light-pmb": "^1.0.7",
+    "eslint-plugin-n": "^17.16.2"
   },
 
 
