@@ -19,7 +19,7 @@ This one tries to give you all of the low-hanging fruit.
 API
 ---
 
-This module exports one function, which carries two methods:
+This module exports one function, which carries a few methods:
 
 ### findUpPackageJson(from)
 
@@ -32,7 +32,8 @@ a promise for the report.
 If `from` is false-y, start searching at the current working directory.
 Otherwise, it should be a local directory path, as a string, where to start.
 
-Throws an Error if no `package.json` is found, or it cannot be read.
+Throws an Error with `.name === 'ERR_FOUND_NO_PACKAGE_JSON'`
+if no `package.json` is found.
 
 Returns a report object with these keys:
 
@@ -56,6 +57,12 @@ Returns a report object with these keys:
 Given the `fullPath` to a `package.json` file, and its `rawContent`
 as a string or Buffer, construct a report object and return it.
 For better debugging, you may provide `from`, the initial search directory.
+
+
+### findUpPackageJson.syncSoftFail(from)
+
+A little wrapper around `.sync` that in case of an `ERR_FOUND_NO_PACKAGE_JSON`
+error just returns `false`.
 
 
 

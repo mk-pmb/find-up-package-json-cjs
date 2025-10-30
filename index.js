@@ -34,9 +34,21 @@ EX.sync = function findUpPackageJsonSync(from) {
 };
 
 
+EX.syncSoftFail = function findUpPackageJsonSyncSoftFail(from) {
+  try {
+    return EX.sync(from);
+  } catch (err) {
+    if (!err) { throw new TypeError('Caught a false-y value as error'); }
+    if (err.name === 'ERR_FOUND_NO_PACKAGE_JSON') { return false; }
+    throw err;
+  }
+};
+
+
 EX.report = function findUpPackageJsonReport(fullPath, rawContent, from) {
   if (!fullPath) {
     const err = new Error('Found no package.json file up from ' + from);
+    err.name = 'ERR_FOUND_NO_PACKAGE_JSON';
     err.from = from;
     throw err;
   }

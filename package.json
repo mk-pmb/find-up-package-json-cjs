@@ -1,5 +1,5 @@
 { "name": "find-up-package-json-cjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CommonJS module to find the closest `package.json`, read it, and report its content along with paths and goodies.",
   "keywords": [],
 
